@@ -2,7 +2,7 @@
 
 body {
   font-family: "Lora", serif;
-
+  color: blue;
   padding: 20px;
   background-image: url("https://img.freepik.com/vetores-premium/padrao-perfeito-de-fast-food-no-estilo-doodle_650511-939.jpg?w=2000");
   background-size: cover;
@@ -26,7 +26,6 @@ body {
 }
 
 label {
-  color: white;
   display: block;
   margin-bottom: 5px;
 }
@@ -44,7 +43,7 @@ input[type="text"] {
 
 .add-step-button {
   background-color: black;
-  color: white;
+
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -64,7 +63,7 @@ button[type="submit"] {
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: black;
-  color: white;
+
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -84,18 +83,15 @@ button[type="submit"]:hover {
 }
 
 .recipe-card h2 {
-  color: white;
   font-size: 20px;
   margin-bottom: 10px;
 }
 
 .recipe-card h3 {
-  color: white;
   font-size: 18px;
 }
 
 .recipe-card p {
-  color: white;
   margin-bottom: 5px;
 }
 
@@ -105,5 +101,5 @@ button[type="submit"]:hover {
 }
 
 .recipe-card li {
-  color: white;
+  color: blue;
 }

@@ -74,56 +74,85 @@ const RecipeForm = () => {
     }
   };
   return (
-    <div>
-      {/* ... your buttons and other elements ... */}
-      <form className="total" onSubmit={handleSubmit}>
-        <h1>recipe app</h1>
-        <label>
-          <h2>Enter Title</h2>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter title"
-          id="title"
-          name="title"
-          className="title-card"
-          value={formData.title}
-          onChange={handleChange}
-        />
-        <div className="error">{titleError}</div>
-        <label>
-          <h2>Enter Image url</h2>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter url"
-          id="image"
-          name="imageUrl"
-          className="title-card"
-          value={formData.imageUrl}
-          onChange={handleChange}
-        />
-        <div className="error">{imageUrlError}</div>
-        <label>
-          <h2>Enter Steps</h2>
-        </label>
-        {formData.steps.map((step, index) => (
-          <div className="textarea-div" key={step.id}>
+    <>
+      <div className="container">
+        <div className="item">
+          <h2>Create a Recipe</h2>
+          <form className="total" onSubmit={handleSubmit}>
+            <label>
+              <h2>Enter Title</h2>
+            </label>
             <input
               type="text"
-              placeholder="Enter step"
-              id={`step-${index}`}
-              value={step.text}
-              onChange={(e) => handleStepChange(e, step.id)}
+              placeholder="Enter title"
+              id="title"
+              name="title"
+              className="title-card"
+              value={formData.title}
+              onChange={handleChange}
             />
+            <div className="error">{titleError}</div>
+            <label>
+              <h2>Enter Image url</h2>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter url"
+              id="image"
+              name="imageUrl"
+              className="title-card"
+              value={formData.imageUrl}
+              onChange={handleChange}
+            />
+            <div className="error">{imageUrlError}</div>
+            <label>
+              <h2>Enter Steps</h2>
+            </label>
+            {formData.steps.map((step, index) => (
+              <div className="textarea-div" key={step.id}>
+                <input
+                  type="text"
+                  placeholder="Enter step"
+                  id={`step-${index}`}
+                  value={step.text}
+                  onChange={(e) => handleStepChange(e, step.id)}
+                />
+              </div>
+            ))}
+            <div className="error">{stepsError}</div>
+            <div id="btn">
+              <button
+                type="button"
+                className="add-step-button"
+                onClick={handleAddStep}
+              >
+                Add step
+              </button>
+              <button type="submit" onClick={handleSubmit}>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="mapping">
+        {recipes.map((recipe) => (
+          <div key={recipe.id} className="recipe-card">
+            <h2>Recipe Cards</h2>
+            <h3>{recipe.title}</h3>
+            <p>Steps:</p>
+            <ul>
+              {recipe.steps.map((step) => (
+                <li key={step.id}>{step.text}</li>
+              ))}
+            </ul>
+            <div>
+              <img src={recipe.imageUrl} alt="Recipe" />
+            </div>
           </div>
         ))}
-        <div className="error">{stepsError}</div>
-        <div id="btn">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </>
   );
 };
 export default RecipeForm;

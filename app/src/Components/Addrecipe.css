@@ -1,0 +1,56 @@
+/* AddRecipe.css */
+body {
+  font-family: "Lora", serif;
+
+  padding: 20px;
+  background-image: url("https://img.freepik.com/vetores-premium/padrao-perfeito-de-fast-food-no-estilo-doodle_650511-939.jpg?w=2000");
+  background-size: cover;
+}
+
+.add-recipe {
+  text-align: center;
+  margin: 50px auto;
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(29, 28, 34, 0.8);
+  border-radius: 8px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.add-recipe h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.add-recipe label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-recipe input[type="text"],
+.add-recipe textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.add-recipe button[type="submit"] {
+  background-color: black;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-recipe button[type="submit"]:hover {
+  background-color: gray;
+}
+button a {
+  background-color: rgba(29, 28, 34, 0.8);
+}
